@@ -10,10 +10,9 @@ numberOfGuesses = 0
 
 #assign random number to variable
 randomNum = random.randint(1,20)
-print(randomNum)
 
 #welcome user and explain the rules of the game
-print("Welcome to the Guessing Game. You have five attempts to guess a randomly generated number between 1 and 20. Good luck.")
+print("Welcome to the Guessing Game!\nYou have five attempts to guess a randomly generated number between 1 and 20. Good luck.")
 
 #logic to control the game. If/else statements nested inside a while loop.
 while numberOfAttempts < 5: 
