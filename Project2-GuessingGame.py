@@ -3,7 +3,7 @@ import random
 import time
 import signal  
 
-#declare variables
+#declare and initialize variables
 randomNum = 0
 userNum = 0
 numberOfAttempts = 0
@@ -14,7 +14,7 @@ def timeout_handler(signal, frame):
     raise Exception("Time is up!")
 signal.signal(signal.SIGALRM, timeout_handler)
 
-#assign random number to variable
+#assign random number between 1-20 to variable
 randomNum = random.randint(1,20)
 
 #welcome user and explain the rules of the game
@@ -24,7 +24,7 @@ print("Welcome to the Guessing Game!\nYou have five attempts and 25 seconds to g
 start = time.time()
 
 signal.alarm(25)
-#logic to control the game. If/else statements nested inside a while loop.
+#logic to control the game and take user input. If/else statements nested inside a while loop.
 try:
     while time.time() - start < 25:  
         if numberOfAttempts < 5:
