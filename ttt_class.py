@@ -3,6 +3,22 @@ import random
 
 class ttt:
 
+    def __init__(self):
+        self.board = [None] + list(range(1,10))
+        self.winning_sets = [ 
+            (1, 2, 3),
+            (4, 5, 6),
+            (7, 8, 9),
+            (1, 4, 7),
+            (2, 5, 8),
+            (3, 6, 9),
+            (1, 5, 9),
+            (3, 5, 7),
+        ]
+        self.numPlayers = 1
+        self.currentPlayer = 1
+        self.winner = False
+
     @staticmethod
     def drawBoard(board):
         print(board[7], board[8], board[9])
